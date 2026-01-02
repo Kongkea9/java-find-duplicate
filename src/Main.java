@@ -4,7 +4,7 @@ public class Main {
 
     static Object[] findDuplicate(Object[] objects)
     {
-        Object[] duplicateElement = new Object[objects.length];
+        Object[] duplicateElements = new Object[objects.length];
         int length = 0;
 
 
@@ -14,7 +14,7 @@ public class Main {
             {
                 if (objects[i].equals(objects[j])) {
 
-                    duplicateElement[i] = objects[i];
+                    duplicateElements[i] = objects[i];
                     ++length;
 
                     break;
@@ -22,18 +22,17 @@ public class Main {
             }
 
         }
-
-        Object[] finalDuplicateElement = new Object[length];
+        Object[] finalDuplicateElements = new Object[length];
 
         int index = 0;
-        for (Object o : duplicateElement) {
-            if (o != null) {
-                finalDuplicateElement[index] = o;
+        for (Object element : duplicateElements) {
+            if (element != null) {
+                finalDuplicateElements[index] = element;
                 index++;
             }
         }
 
-        return finalDuplicateElement;
+        return finalDuplicateElements;
     }
 
 
